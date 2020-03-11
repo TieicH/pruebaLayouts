@@ -1,0 +1,271 @@
+.modal-email{
+    position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+      display: none;
+    
+    &.edit-mode {
+        display: block !important;
+        position: relative;
+    }
+    .overlay{
+        background:$overlay;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+      &.open{
+          display: none;
+          opacity: 1;
+      }
+
+.modalEmail{
+    position: fixed;
+    top:48px;
+    left: 0px;
+    right: 0px;
+    max-width: 1148px;
+    bottom: 0px;
+    margin: 0 auto;
+    max-height: 560px;
+    display: none;
+    text-align: center;
+    @include animation-time;
+
+}
+      .modal__container{
+        max-width: 313px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 52px 32px; 
+        position:relative;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        @media only screen and (max-width:330px){
+            top:2.5%;
+            max-width: 90%;
+        }
+
+        @include media (tablet){
+            max-width: col(19,41);
+            top: 12vh;
+            padding: 56px col(3,41); 
+        }
+
+        @include media(desktop){
+            max-width: col(19,41);
+            top: 12vh; 
+            padding: 56px col(3,41); 
+        }
+        .close{
+                position: absolute;
+                cursor: pointer;
+                top: 14px;
+                right: 14px;
+        }
+
+        .modal__title{
+            margin-bottom: 24px;
+            h1{
+                font-size: 12px;
+                line-height: 14px;
+                text-align: center;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                font-family: $primary-font;
+                color:$title-text-color;
+                margin-bottom: 30px;
+                font-weight: 400;
+                @include media (tablet){
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                }
+                @include media (desktop){
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+
+                }
+
+            }
+            p{
+                margin-bottom: 24px;;
+            }
+            @include media(tablet){
+            
+            }
+            @include media(desktop){
+                
+            }
+            border-bottom: 1px solid #EDEFF5;
+
+            &.active{
+                display: none;
+            }
+        }
+        .modal__content{
+            max-height: 400px;
+            h2{
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $primary-font;
+                letter-spacing: -0.8px;
+                color:$title-text-color;
+                margin-bottom: 16px;
+                padding-top: 32px;
+                @include media(tablet){
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 48px;
+                }
+                @include media(desktop){
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 48px;
+                }
+            }
+            p{
+                font-family:$second-font;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 143%;
+                letter-spacing: -0.2px;
+                color: $paragraph-text-color;
+                margin-bottom: 24px;
+            }
+          
+            .btn__primary{
+                margin-bottom: 0px!important;
+                margin-top: 12px;
+                @include media(desktop){
+                    margin-bottom: 0px;
+                    margin-top: 12px;
+                    padding: 16px 32px;
+                    line-height: 16px;
+                    font-size: 14px;
+                    letter-spacing: 0.8px;
+                }
+            }
+            .link{
+                cursor: pointer;
+            }
+
+            &.active{
+                display: none;
+            }
+        }
+        .modal_thanks{
+            display: none;
+
+            img{
+                max-width: 130px;
+                height: auto;
+            }
+            h3{
+
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: -0.2px;
+                font-weight: 300;
+                font-family: 'Lato',sans-serif;
+                margin-top: 24px;
+                @include media(tablet){
+                font-size: 28px;
+                line-height: 36px;  
+                }
+                b{
+                color: #ef3340;
+                font-weight: 400;
+                }
+            }
+            p{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #676F8F;
+                margin-top: 16px;
+            }
+            .buttons-modal{
+              
+                @include flex(wrap);
+
+                .btn{
+                  
+                    @include media(tablet){
+                    width: 50%;
+                    }
+               
+                .btn__primary{
+                    margin-bottom: 0px;
+                    display: inline-block;
+                    width: 100%;
+                    margin-top:24px;
+                    @include media(tablet){
+                     margin-top:48px;
+                    }
+
+                }
+                .btn__primary--border{
+                    margin-bottom: 0px;
+                    display: inline-block;
+                    margin-top:16px;
+                    @include media(tablet){
+                    margin-left: 12px;
+                    width: calc(100% - 12px);
+                    margin-top:48px;
+                    }
+                }
+            }
+            }
+
+          &.active{
+              display: block;
+          }
+        }
+      }
+
+      &.active{
+          display: block;
+          z-index: 99999;
+        .overlay{
+           display: block;
+            -webkit-animation: fade-in 0.6s cubic-bezier(0.4, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 0.6s cubic-bezier(0.4, 0.575, 0.565, 1.000) both;
+        }
+      .modalEmail{
+          display: block;
+          -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+           animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+       }
+        }
+  }
+
+  .cq-Editable-dom .modal-email{
+    display: block;
+    min-height: 50px;
+    position: relative;
+    border: 1px solid lightgray;
+
+
+    .modal__container{
+      position: initial;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      display: block;
+    }
+}

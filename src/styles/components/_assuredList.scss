@@ -1,0 +1,112 @@
+
+.content-listassured{
+    margin-top:48px;
+    width: 100%;
+    height: auto;
+        &-title{
+                border-bottom: 1px solid #EDEFF5;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+                @include media(desktop){
+                width: col(15,17);
+                }
+                &__h3{
+                font-family: $primary-font;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 28px;
+                color:$title-text-color; 
+                margin-bottom: 8px;
+                }
+                &__img{
+                
+                width: auto;
+                height: 16px;
+                margin-right:7px;
+                border-radius: 50%;
+                }
+                &__p{
+            
+                    display: inline-block;
+                    font-family: $second-font;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    color: $paragraph-text-color;
+                    strong{
+                        font-weight: normal;
+                    }
+                }
+        }
+
+        &-name {
+            width: auto;
+            margin-bottom: 40px;
+            font-style: normal;
+            border-bottom:  1px solid #EDEFF5;
+            padding-bottom: 24px;
+            @include media(desktop){
+                width: col(15,17);
+            }
+            &__p{
+            font-family: $primary-font;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $title-text-color;
+            }
+            &__label{
+            font-family: $second-font;
+           
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.2px;
+            color: #676F8F;
+            }
+
+            &__secondary {
+                width: auto;
+                font-style: normal;
+                padding-bottom: 12px;
+                @include media(desktop){
+                    width: 100%;
+                }
+                &__p{
+                font-family: $primary-font;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: $title-text-color;
+                }
+                &__label{
+                font-family: $second-font;
+               
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.2px;
+                color: #676F8F;
+                }
+            }
+        }
+}
+
+
+.listassured-form{
+    width: col(39,41);
+  
+&__p{
+    margin-bottom: 24px;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    color: #494F66;
+}
+}
+ 

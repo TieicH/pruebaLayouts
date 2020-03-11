@@ -1,0 +1,58 @@
+
+.bg-left {
+    background: #f0353b;    
+    position: fixed;
+    top: 0;
+    border-radius: 0 0 80px 0;
+    hr {
+        position: absolute;
+        width: 100%;
+        border: 0.5px solid #F55D68;
+        top: 64px;
+        left: -4px;
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        -moz-transform: rotate(0);
+    }
+    @include media(desktop){
+        left: -5%;
+        height: 100vh;
+        @include skew(-2deg);
+    }
+    &--wlong {
+        width: 53%;
+        @include media(mobile) {
+            width: 100%;
+        }
+    }
+    
+    &--wshort {
+       display: none;
+        @include media(desktop) { 
+            width: 29.890244% + 2.5%;
+            display: block;
+        }
+        @media only screen and (min-width:1148px){            
+            width: calc(((100% - 1148px) / 2) + 280px + 4.1%);
+        }
+    }
+    &__logo {
+        position: relative;
+        top: 23px;
+        left: calc(100% - 276px);
+        img {
+            width: 100px;
+        }
+    }
+    &__img {
+        position: relative;
+        top: 18%;
+        left: calc(100% - 208px);
+        @include skew(2deg);
+        img {
+            width: 294px;
+        }
+    }
+}

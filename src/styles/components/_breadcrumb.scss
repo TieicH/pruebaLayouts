@@ -1,0 +1,30 @@
+.breadcrumb{
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #A9B1D1;
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include media (desktop){
+        margin-bottom: 32px;
+    }
+    strong{
+        color:#ef3340;
+        span{
+             display: none;
+             @include media(tablet){
+                color:#ef3340;
+                display: inline;
+             }
+        }
+    }
+   
+    a{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 16px;;
+    }
+}

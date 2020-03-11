@@ -1,0 +1,68 @@
+//Fonts
+$primary-font:"Lato",Arial,sans-serif;
+$second-font: "Roboto", sans-serif;
+
+//Colors
+$first-color: #ef3340;
+
+//Text Color
+$title-text-color:#494F66;
+$paragraph-text-color:#676F8F;
+$second-text-color:#ffffff;
+$third-text-color:#f0353b;
+
+//Link color
+$link-text-color: #939dff;
+
+//Border radius
+$border-radius-first: 6px;
+$border-radius-second: 16px;
+
+//Buttons colors
+$btn-primary-color:#ef3340;
+$btn-primary-hover:#fc4e55;
+
+//Color Modal
+$overlay:rgba(73, 80, 102, 0.8);
+
+//Reds
+$red: #EF3340;
+$red2: #FC4E55; 
+$red3: #FC606B;
+$red4: #FFD7DA;
+$red5: #FEE7E9;
+
+//Grays
+$gray: #494F66;
+$gray2: #676F8F;
+$gray3: #A3ABCC;
+$gray4: #C5CBE0;
+$gray5: #E4E8F7;
+$gray6: #F0F2FA;
+$gray7: #F7F8FC;
+
+//Acian
+$acian: #939DFF;
+$acian2: #6F7DFF;
+
+//Green
+$green: #83CC5E;
+$green2: #CFEDC0;
+$green3: #E9F7E2;
+
+//Orange
+$orange: #FFA733;
+$orange2: #FFDCA9;
+$orange3: #FFEFD8;
+
+//Fonts
+$lato:"Lato",Arial,sans-serif;
+$roboto: "Roboto", sans-serif;
+
+//Color Modal
+$overlay:rgba(73, 80, 102, 0.8);
+
+// Mobile Breakpoints
+$mobile-screen: 280px;
+$small-screen:  425px;
+$medium-screen: 1023px;

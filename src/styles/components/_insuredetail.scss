@@ -1,0 +1,149 @@
+.insuredetail {
+    margin-top:32px ;
+    margin-bottom: 32px;
+    .line{
+        width: 100%;
+        border: none;
+        height: 1px;
+        background-color: #edeff5;
+    }
+    
+    &__resumen{
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+
+        @include media (tablet){
+            display: initial;
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            align-items: center;
+            letter-spacing: 0.2px;
+            color: #676F8F;
+            font-family: $second-font;
+            float: left;
+            font-weight: 300;
+            width: 50%;
+
+            @media only screen and (max-width:330px){
+                font-size: 12px;
+            }
+
+            @include media (tablet){
+               margin-right: 0px;
+            }
+        }
+        a{
+            text-align: right;
+            float: right;
+            color: #A9B1D1;
+            width: 50%;
+            @media only screen and (max-width:330px){
+                font-size: 10px;
+            }
+            @include media (tablet){
+                margin-top: 2px;
+            }
+            &::after{
+                content:'';
+                background-image: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.707882 0.121118C0.549862 -0.0366221 0.301056 -0.0401739 0.138692 0.109804C0.0508675 0.191049 4.49977e-07 0.30724 4.39221e-07 0.430283C4.29015e-07 0.547022 0.0456576 0.658124 0.126618 0.739115L3.20935 3.87865C3.29016 3.95929 3.39589 4 3.5001 4C3.60433 4 3.7098 3.95952 3.79058 3.87887L6.87314 0.739516C7.04754 0.565116 7.04066 0.275415 6.86154 0.109878C6.69917 -0.0401909 6.45029 -0.0366363 6.29226 0.121138L3.5001 2.97083L0.707882 0.121118Z' fill='%23A9B1D1'/%3E%3C/svg%3E");
+                width: 7px;
+                height: 12px;
+                background-repeat: no-repeat;
+                background-size: 7px;
+                margin-left: 8px;
+                background-position: center right;
+                display: inline-block;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+                transform-origin: center;
+                
+            }
+
+            &.active{
+                color: #939dff;
+                &::after{
+                    transform-origin: center;
+                    -moz-transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+
+                }
+            }
+        }
+    }
+    &__detail{
+        max-height: 1px;
+        overflow: hidden;
+        transition: .3s ease-in-out all;
+        &.active{
+            max-height: 100rem;
+         
+        }
+        ul{
+            border-top: 1px solid #EDEFF5;
+
+            li{
+                list-style: none;
+                padding-top: 32px; 
+                .relation {
+                    font-size: 16px;
+                    color: #494F66;
+                    font-family: $primary-font;
+                    font-weight: 400;
+                }
+                .date, .relation {
+                    line-height: 24px;
+                }
+                .date {
+                    color: #a3abcc;
+                    font-weight: 300;
+                    padding-left: 7px;
+                }
+                .price{
+                    text-align: right;
+                    float: right;
+                    font-size: 20px;
+                    font-weight: 300;
+                    font-family:$primary-font;
+                    span{
+                        font-size: 12px;   
+                    }
+                }
+            }
+        }
+        .price--total{
+            margin-top: 32px;
+            padding-top: 32px;
+            padding-bottom: 24px;
+            border-top: 1px dashed #A9B1D1;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.6px;
+            color:#494f66;
+            font-family: $primary-font;
+            .price{
+                float: right;
+                font-size: 24px;
+                font-weight: 300;
+                span{
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

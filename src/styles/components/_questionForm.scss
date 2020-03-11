@@ -1,0 +1,135 @@
+.question-form {
+    padding: 0 32px;
+
+    @include media(desktop) {
+        padding: 0;
+    }
+    
+    &__title {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #494F66;
+        margin: 48px 0 24px 0;
+        @include media(desktop) {
+            margin: 0 0 24px 0;
+        }
+    }
+
+    &__form {
+        text-transform: capitalize;
+    }
+        
+    &__button {
+        background: #EF3340;
+        border-radius: 6px;
+        width: 100%;
+        border: none;
+        font-family: $primary-font;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #ffffff;
+        height: 52px;
+        margin: 45px 0 64px;
+
+        &::after {
+            content: '>';
+            float: right;
+            font-size: 20px;
+            margin-right: 32px;
+            @include media(desktop) {
+                margin-right: 19px;
+            }
+        }
+
+        &:disabled {
+            background-color: #EDEFF5;
+        }
+
+        @include media(desktop){
+            width: 155px;
+            text-align: center;
+            padding-left: 24px;
+            float: right;
+        }
+    }
+}
+
+
+.inputfloat{
+    box-sizing: border-box;
+    align-content: center;
+    color: #A9B1D1;
+    font-size: 16px;
+    margin: 0;
+    width: 50%;
+    display: inline-block;
+
+    &__input{
+        padding: 26px 16px 12px;
+        width: 100%;
+        outline: none;
+        border: 1px solid #D4D5E8;
+        box-sizing: border-box;
+        color: #494F66;
+        margin: 0;
+        font-family: $primary-font;
+        font-size: 16px;
+    }
+
+    &__input:disabled {
+        background-color: #F7F7FA;
+    }
+
+    &__label{
+        position: relative;
+        top: -38px;
+        transition: .5s;
+        padding: 20px;
+        pointer-events: none;
+        font-family: $primary-font;
+        font-size: 16px;
+        line-height: 16px;
+        color: #A9B1D1;
+    }
+    
+    &__input:focus ~ &__label,
+    &__input:valid ~ &__label{
+        top: -50px;
+        padding: 0 0 0 16px;
+        font-size: 12px;
+        font-family: $second-font;
+        line-height: 12px;
+    }
+}
+
+.border-radius-left {
+    border-right: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.border-radius-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.form-inputs {
+    margin: 12px 0;
+
+    &__texto {
+        font-family: $second-font;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #676F8F;
+        margin-bottom: 16px;
+    }
+}
+

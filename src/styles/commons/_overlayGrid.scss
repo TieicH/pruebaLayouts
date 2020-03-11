@@ -1,0 +1,30 @@
+#overlayGrid {
+  margin: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 6;
+  max-width: 296px;
+  background-image: repeating-linear-gradient(90deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) (100/37*1%),
+      rgba(255, 255, 0, 0.05) (100/37*1%),
+      rgba(255, 255, 0, 0.05) (200/37*1%));
+
+  @include media(mobile-tablet){
+    width: 90%;
+    max-width: 540px;
+  }
+  @include media(tablet){
+    max-width: 592px;
+  }
+  @include media(desktopmini){
+    max-width: 946px;
+  }
+  @include media(desktop){
+    max-width:1184px;
+  }
+}

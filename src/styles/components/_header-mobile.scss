@@ -1,0 +1,55 @@
+.headermobile{
+    &::before{
+        content:"";
+        width:100%;
+        height: 100%;
+        position: absolute;
+        height: 272px;
+        left: 0;
+        background-color:#fafafc;
+        top: 0px;
+    }
+    .home__logo{
+        background-color: $first-color;
+        margin-bottom: 0px;
+    }
+    &__title{
+        padding-top:32px;
+        padding-bottom: 48px;
+        position: relative;
+        z-index: 2;
+        h2{
+            margin-bottom: 16px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+            color: #676F8F;
+            font-family: $second-font;
+        }
+    }
+    @include media(desktop){
+        background-color: transparent;
+        margin-top: 64px;
+        .home__logo{
+            background-color: transparent;
+        }
+
+        &__title{
+            background-color: white;
+            padding-top: 0px;
+            h2{
+                margin-bottom: 8px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+        }
+        &::before{
+            display: none;
+        }
+    }  
+}

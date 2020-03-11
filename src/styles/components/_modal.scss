@@ -1,0 +1,463 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: none;
+   
+    .overlay {
+        background: $overlay;
+        width: 100%;
+        height: 100%;
+
+        display: none;
+    }
+    &.open {
+        display: block;
+        opacity: 1;
+    }
+    .modalDefault {
+        position: fixed;
+        top: 48px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0 auto;
+        max-height: 560px;
+        display: none;
+        @include animation-time;
+    }
+
+    .modal__container {
+        max-width: 313px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 52px 32px;
+        padding-right: col(2, 41);
+        position: relative;
+
+        @media only screen and (max-width:330px) {
+            top: 2.5%;
+            max-width: 90%;
+        }
+
+        @include media (tablet) {
+            max-width: 964px;
+            top: 12vh;
+            padding: 56px col(1.5, 41);
+            padding-right: col(1, 41);
+
+        }
+
+        @include media(desktop) {
+            max-width: 964px;
+            top: 12vh;
+            padding: 56px col(1.5, 41);
+            padding-right: 20px;
+        }
+
+        .close {
+
+            position: absolute;
+            cursor: pointer;
+            top: 14px;
+            right: 14px;
+
+        }
+
+        .modal__title {
+            h1 {
+                font-size: 12px;
+                line-height: 14px;
+                text-align: left;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                font-family: $primary-font;
+                color: $title-text-color;
+                margin-bottom: 30px;
+                font-weight: 400;
+
+                @include media (tablet) {
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                }
+
+                @include media (desktop) {
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+
+                }
+
+            }
+
+            @include media(tablet) {
+                margin-right: 98px;
+            }
+
+            @include media(desktop) {
+                margin-right: 98px;
+            }
+
+            border-bottom: 1px solid #EDEFF5;
+        }
+
+        .modal__content {
+            max-height: 400px;
+            overflow-y: scroll;
+            padding-right: col(2, 41);
+
+            h2 {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $primary-font;
+                letter-spacing: -0.8px;
+                color: $title-text-color;
+                margin-bottom: 16px;
+                padding-top: 32px;
+
+                @include media(tablet) {
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 48px;
+                }
+
+                @include media(desktop) {
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 48px;
+                }
+            }
+
+            p {
+                font-family: $second-font;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 143%;
+                letter-spacing: 0.2px;
+                color: $paragraph-text-color;
+            }
+
+            @include media(desktop) {
+                padding-right: 98px;
+            }
+
+        }
+
+    }
+
+    &.active {
+        display: block;
+
+        .overlay {
+            display: block;
+            -webkit-animation: fade-in 0.6s cubic-bezier(0.4, 0.575, 0.565, 1.000) both;
+            animation: fade-in 0.6s cubic-bezier(0.4, 0.575, 0.565, 1.000) both;
+        }
+
+        .modalDefault {
+            display: block;
+            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+
+    &.edit-mode {
+        display: block !important;
+        position: relative;
+    }
+}
+
+.modal__image {
+    &.edit-mode {
+        display: block !important;
+        position: relative;
+    }
+
+    .modal__container {
+        max-width: 313px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        max-height: 464px;
+        position: absolute;
+        top: 48px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0 auto;
+        padding: 52px 32px;
+
+        @media only screen and (max-width:330px) {
+            top: 2.5%;
+            max-width: 90%;
+        }
+
+        @include media (tablet) {
+            max-width: 670px;
+            top: 12vh;
+            padding: 56px 98px;
+            padding-right: 0px;
+        }
+
+        @include media(desktop) {
+            max-width: 670px;
+            top: 12vh;
+            padding: 56px 98px;
+            padding-right: 0px;
+        }
+
+        .close {
+            position: absolute;
+            cursor: pointer;
+            top: 14px;
+            right: 14px;
+        }
+
+        .modal__title {
+            h1 {
+                font-size: 12px;
+                line-height: 14px;
+                text-align: left;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                font-family: $primary-font;
+                color: $title-text-color;
+                margin-bottom: 30px;
+                font-weight: 400;
+
+                @include media (tablet) {
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                }
+
+
+            }
+
+            @include media(tablet) {
+                margin-right: 98px;
+            }
+
+            @include media(desktop) {
+                margin-right: 98px;
+            }
+
+            border-bottom: 1px solid #EDEFF5;
+        }
+
+        .modal__content {
+            max-height: 400px;
+            overflow-y: scroll;
+
+            @include media (tablet) {
+                // background-image: url("./content/dam/rimac/ami/purchase-summary/bg-asesor.png");
+                background-size: 61%;
+                background-position: right -3px;
+                background-repeat: no-repeat;
+                margin-right: 16px;
+                margin-top: 1px;
+
+            }
+            @include media(desktop) {padding-right: 98px;}
+
+            .content-list {
+                width: 304px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            img {
+                display: none;
+                height: auto;
+                width: 100px;
+                padding-top: 24px;
+                vertical-align: middle;
+                @include media (tablet) {display: inline-block;}
+            }
+
+            ul {
+                padding-top: 40px;
+                padding-bottom: 16px;
+                li {
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 12px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.19048 10.6782C5.6463 11.1083 6.34803 11.1083 6.80386 10.672L6.86983 10.6096C10.0186 7.64877 12.0758 5.71019 11.9979 3.29164C11.9619 2.23196 11.4401 1.21592 10.5944 0.617513C9.01101 -0.504496 7.05576 0.0191079 6.00016 1.30319C4.94457 0.0191079 2.98932 -0.51073 1.40593 0.617513C0.560257 1.21592 0.0384579 2.23196 0.00247097 3.29164C-0.0814962 5.71019 1.98171 7.64877 5.1305 10.6221L5.19048 10.6782Z' fill='%23EF3340'/%3E%3C/svg%3E%0A");
+                        background-size: cover;
+                        background-position: center center;
+                    }
+                    b {
+                        display: block;
+                        margin-left: 24px;
+                        @include media(desktop) {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+            
+            h2 {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $primary-font;
+                letter-spacing: -0.8px;
+                color: $title-text-color;
+                margin-bottom: 16px;
+                padding-top: 32px;
+                @include media(tablet) {
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 48px;
+                }
+            }
+
+            p {
+                font-family: $second-font;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 143%;
+                letter-spacing: 0.2px;
+                color: $paragraph-text-color;
+            }
+        }
+
+    }
+
+}
+
+.modal__notification {
+    &.edit-mode {
+        display: block !important;
+        position: relative;
+    }
+
+    .modal__container {
+        max-width: 313px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        position: absolute;
+        max-height: 452px;
+        top: 48px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0 auto;
+        padding: 48px 24px;
+        text-align: center;
+
+        @media only screen and (max-width:330px) {
+            top: 2.5%;
+            max-width: 90%;
+        }
+
+        @include media (tablet) {
+            max-width: 572px;
+            top: 12vh;
+            padding: 56px 98px;
+            padding-right: 0px;
+            max-height: 486px;
+        }
+
+        .close {
+            position: absolute;
+            cursor: pointer;
+            top: 14px;
+            right: 14px;
+        }
+
+        .modal__content {
+            max-height: 400px;
+            overflow-y: scroll;
+
+            @include media(mobile) {
+                padding-right: 0px;
+            }
+
+            img {
+                height: auto;
+                width: 120px;
+                padding-top: 0px;
+                vertical-align: middle;
+
+                @include media (tablet) {
+                    display: inline-block;
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+                line-height: 24px;
+                font-family: $primary-font;
+                letter-spacing: -0.8px;
+                color: $title-text-color;
+                margin-bottom: 16px;
+                padding-top: 32px;
+                font-weight: 300;
+                display: none;
+                @include media(tablet) {
+                    font-size: 28px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    padding-top: 16px;
+                    text-align: center;
+                    display: block;
+                }
+
+                b {
+                    color: $first-color;
+                    font-weight: 400;
+                }        
+
+                &.mobile {
+                    display: block;
+                    @include media (tablet) {
+                        display: none;
+                    }
+                }     
+            }
+
+            p {
+                font-family: $second-font;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 143%;
+                letter-spacing: 0.2px;
+                color: $paragraph-text-color;
+                text-align: center;
+            }
+
+            .btn__active {
+                margin-top: 16px;
+            }
+        }
+
+    }
+
+}
+
+.cq-Editable-dom .modal {
+    display: block;
+    min-height: 50px;
+    position: relative;
+    border: 1px solid lightgray;
+    .modal__container {
+        position: initial;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        display: block;
+    }
+}

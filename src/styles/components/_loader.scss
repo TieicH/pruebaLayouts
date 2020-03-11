@@ -1,0 +1,151 @@
+@-webkit-keyframes loader {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+#wp-loader {
+  &.active {
+    display: none;
+  }
+}
+
+.wp-loader-cont {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+
+  .contenedor-loader {
+
+    .container {
+      max-width: 100%;
+      width:100%;
+    }
+
+    .line-load {
+      width: 100%;
+      height: 4px;
+      background-color: #F7F7FA;
+      ;
+
+      .loader-react {
+        width: 0px;
+        height: 100%;
+        background-color: #EF3340;
+        -webkit-animation: loader 6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation: loader 6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    div.message {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 4px);
+      -webkit-animation: puff-in-center 0.7s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1s both;
+      animation: puff-in-center 0.7s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1s both;
+
+      img {
+        width: 198px;
+        height: 180px;
+        opacity: 1;
+      }
+
+      p {
+        font-size: 28px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.2px;
+        font-family: 'Lato', sans-serif;
+        max-width: 380px;
+        text-align: center;
+        margin-top: 32px;
+        margin-right: auto;
+        margin-left: auto;
+        opacity: 1;
+        width:90%;
+        font-weight: 300;
+        color:#494F66;
+
+        b {
+          color: #EF3340;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+}
+.cq-Editable-dom #wp-loader{
+  display: block;
+  min-height: 50px;
+  position: relative;
+  border: 1px solid lightgray;
+  div.message {
+    height: 400px;
+  }
+}
+
+.cq-Editable-dom .wp-loader-cont{
+  display: block;
+  min-height: 50px;
+  height: 400px;
+  position: relative;
+  border: 1px solid lightgray;
+}

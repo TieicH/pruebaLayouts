@@ -1,0 +1,173 @@
+.cardpay{
+    width:100%;
+    height: auto;
+    background: #FFFFFF;
+    border: 3px solid #F7F7FA;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 48px;
+    @include media(desktop){
+        width: 420px;
+        margin-top:0px;
+}}
+
+.cardpay-content{
+    margin:col(1,15);
+    @include media(desktop){
+        margin-bottom: 40px;
+    }
+}
+
+.cardpay-content-header{
+    display:flex;
+}
+.cardpay-content-left{
+    display: inline-block;
+    &__p {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: $title-text-color;
+    }
+    &__span{
+        display: table-cell;
+        font-family: $second-font;
+        font-size: 16px;
+        line-height: 36px;
+        color: $title-text-color;    
+        vertical-align: middle; 
+
+    }
+    &__strong{
+        display: table-cell;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -0.8px;
+        color: $title-text-color;
+    }
+
+    &__label{
+        display: table-cell;
+        font-family: $second-font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        color: $title-text-color;
+        padding-right: col(3,39);
+      @include media (desktop){
+        padding-right: 102px;
+      }
+      @include media(tablet){
+        padding-right: 102px;
+      }
+    }
+}
+
+.cardpay-content-right{
+    &__img{
+        width: auto;
+        height: 57px;
+        padding-left: 23px;
+        border-left: 1px solid #EDEFF5;
+    
+    }
+}
+.cardpay-content-section{
+    margin-top: 26px;
+    margin-bottom: 35px;
+    @include media(desktop){
+      
+        margin-bottom: 48px;
+    }
+    
+}
+.cardpay-line{
+       background-color: 1px solid #EDEFF5;
+     
+}
+
+.cardpay-content-section-info{
+    margin-bottom: 16px;
+    &__p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: $title-text-color;
+    }
+    &__span,&__label{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: $title-text-color;
+        margin-left: 1px;
+        
+    }
+    &__strong{
+
+        font-family: $second-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: #676F8F;
+    }
+}
+.cardpay-content-section-list-ul{
+        list-style: none;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 24px;
+  
+    &__img{
+        width: 12px;
+        height: 11px;
+        margin-right:col(1,39);
+    }
+
+    &__span{
+        width: 219px;
+        height: 24px;
+        font-family: $second-font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        color: #494F66;
+    }
+}
+
+.card-pay__p{
+    background: #F7F7FA;
+    font-family: $second-font;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #676F8F;
+    padding: 5px;
+    text-align: center;
+    height: 34px;
+   
+  
+}
+.cardpay-line__hr{
+    border:1px solid #EDEFF5;
+    background: #EDEFF5;
+    margin-top: 28px;
+}
+
+
+

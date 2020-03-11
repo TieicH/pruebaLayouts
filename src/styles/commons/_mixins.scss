@@ -1,0 +1,57 @@
+@mixin border-radius($border) {
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;
+    border-radius: $border;
+}
+@mixin flex($flexflow:false,$alignItems:false,$justifycontent:false){
+display:-webkit-flex; 
+display: -ms-flexbox; 
+display: flex;
+
+@if $flexflow !=false{
+    -webkit-flex-flow: $flexflow;
+    flex-flow: $flexflow;
+    -ms-flex-flow: $flexflow;
+}
+@if $justifycontent !=false{
+    justify-content:$justifycontent;
+    -webkit-justify-content:$justifycontent;
+    @if $justifycontent == 'flex-start'{
+    -ms-flex-pack: start;}
+    @else if $justifycontent == 'flex-end'{
+    -ms-flex-pack: end;}
+    @else if $justifycontent == 'center'{
+    -ms-flex-pack: center;}
+}
+
+@if $alignItems !=false{
+    align-items: $alignItems;
+    -webkit-align-items: $alignItems;
+    @if $alignItems == 'flex-start'{
+        -ms-flex-align: start;}
+    @else if $alignItems == 'flex-end'{
+        -ms-flex-align: end;}
+    @else if $alignItems == 'center'{
+         -ms-flex-align: center;}
+}
+
+}
+
+@mixin skew($value){
+    transform: skew($value);
+    -webkit-transform: skew($value);
+    -ms-transform:skew($value);
+    -o-transform: skew($value);
+    -moz-transform: skew($value);
+}
+
+  @mixin animation-time{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  

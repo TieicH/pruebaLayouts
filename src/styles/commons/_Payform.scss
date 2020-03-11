@@ -1,0 +1,440 @@
+.payment {
+	.error {
+		border: 1px solid #ff757a !important;
+	}
+	.cta__btn-primary {
+		font-family: "Lato", sans-serif !important;
+	}
+	.row {
+		margin: 0 col(1, 37);
+	}
+	p,
+	label,
+	span,
+	a {
+		font-family: $second-font;
+	}
+	.input-field {
+		min-height: 54px;
+	}
+	.input-field input[type="text"],
+	.input-field input[type="email"],
+	.input-field input[type="number"],
+	.input-field input[type="date"] {
+		height: 54px !important;
+	}
+	.lista_poliza {
+		font-weight: 300;
+
+		li {
+			padding-bottom: 20px;
+		}
+	}
+	.codigo-dscto {
+		font-size: 14px;
+		font-weight: 300;
+		font-family: "Roboto", sans-serif;
+		margin-bottom: 40px;
+		a {
+			border: 0px;
+			color: $link-text-color;
+			line-height: 16px;
+			font-size: 12px;
+			font-weight: 400;
+			letter-spacing: 0.2px;
+			margin-left: 8px;
+			font-family: "Lato", Arial, Helvetica, sans-serif;
+		}
+
+		&.active {
+			display: none;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	#termspaying {
+		margin-top: 10px;
+	}
+	#termspolizacont {
+		margin-bottom: 20px;
+	}
+	.container-cupon {
+		border: 1px solid lightgray;
+		padding: 9px;
+		box-sizing: border-box;
+		margin-bottom: 32px;
+		border-radius: 5px;
+
+		button {
+			border: 0;
+			background: #ef3340;
+			color: white;
+			border-radius: 4px;
+			font-size: 12px;
+			padding: 14px 0px;
+			cursor: pointer;
+			width: 30%;
+
+			@include media(tablet) {
+				padding: 14px 18px;
+			}
+		}
+
+		#cupon {
+			height: 36px;
+			width: 70%;
+			border: none;
+			padding: 10px;
+			font-size: 14px;
+			font-weight: 400;
+			@include media(tablet) {
+				font-size: 16px;
+			}
+			&::placeholder {
+				font-weight: 300;
+			}
+		}
+	}
+	.detalle-asegurados {
+		display: none;
+		.item__data {
+			margin-bottom: 20px;
+			border-bottom: 1px solid lightgray;
+			padding-bottom: 28px;
+			&--name {
+				color: #494f66;
+				font-style: 16px;
+				font-weight: 400;
+				padding-bottom: 12px;
+			}
+			&--number {
+				font-size: 12px;
+				font-weight: 300;
+				font-family: "Roboto", sans-serif;
+				color: #676f8f;
+			}
+		}
+
+		&.active {
+			display: block;
+		}
+	}
+	.pagototal {
+		border-bottom: 1px solid lightgray;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		.text {
+			display: inline-block;
+			width: col(8, 11);
+			font-weight: 400;
+			font-size: 12px;
+			letter-spacing: 0.6px;
+
+			.asegurados {
+				font-size: 14px;
+				font-weight: 300;
+				letter-spacing: 0px;
+				margin-top: 12px;
+				display: inline-block;
+				font-family: $second-font;
+			}
+			a {
+				border: 0px;
+				color: $link-text-color;
+				line-height: 16px;
+				font-size: 12px;
+				letter-spacing: 0.2px;
+				margin-left: 8px;
+				font-family: "Lato", Arial, Helvetica, sans-serif;
+				&.cerrardetalle {
+					display: none;
+
+					&.active {
+						display: inline;
+					}
+				}
+
+				&.active {
+					display: none;
+				}
+			}
+		}
+		.monto {
+			width: col(3, 11);
+			text-align: right;
+			display: inline-block;
+			font-size: 32px;
+			font-weight: 300;
+
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+	.datos-tarjeta {
+		clear: both;
+
+		.title__subtext {
+			margin-bottom: 24px;
+			font-family: $primary-font;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 28px;
+			color: #494f66;
+		}
+		.title__subtitle {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0.2px;
+			display: inline-block;
+			margin-left: 8px;
+			margin-bottom: 24px;
+		}
+		.image {
+			width: 14px;
+			height: 14px;
+		}
+		.icon-tooltip {
+			position: absolute;
+			top: 33%;
+			right: 12px;
+			font-size: 24px;
+			color: #f0353b;
+			cursor: pointer;
+			width: 15px;
+			height: 15px;
+			background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='7.5' r='7' stroke='%23EF3340'/%3E%3Cpath d='M5.49129 4.425C5.60462 4.325 5.72795 4.23 5.86129 4.14C5.99795 4.05 6.14462 3.97167 6.30129 3.905C6.45795 3.83833 6.62795 3.78667 6.81129 3.75C6.99462 3.71 7.19295 3.69 7.40629 3.69C7.69629 3.69 7.95962 3.73 8.19629 3.81C8.43629 3.89 8.64129 4.005 8.81129 4.155C8.98129 4.30167 9.11295 4.48 9.20629 4.69C9.29962 4.9 9.34629 5.135 9.34629 5.395C9.34629 5.64833 9.30962 5.86833 9.23629 6.055C9.16295 6.23833 9.07129 6.39833 8.96129 6.535C8.85129 6.67167 8.72962 6.79 8.59629 6.89C8.46629 6.99 8.34295 7.085 8.22629 7.175C8.10962 7.26167 8.00795 7.34833 7.92129 7.435C7.83795 7.51833 7.78795 7.61333 7.77129 7.72L7.65629 8.45H6.81129L6.72629 7.635C6.70629 7.47833 6.72795 7.34167 6.79129 7.225C6.85795 7.105 6.94462 6.99667 7.05129 6.9C7.16129 6.8 7.28295 6.705 7.41629 6.615C7.54962 6.52167 7.67462 6.42167 7.79129 6.315C7.90795 6.205 8.00462 6.08333 8.08129 5.95C8.16129 5.81333 8.20129 5.65167 8.20129 5.465C8.20129 5.345 8.17795 5.23833 8.13129 5.145C8.08795 5.04833 8.02629 4.96667 7.94629 4.9C7.86629 4.83 7.76962 4.77667 7.65629 4.74C7.54629 4.70333 7.42629 4.685 7.29629 4.685C7.10629 4.685 6.94462 4.70667 6.81129 4.75C6.68129 4.79 6.56962 4.83667 6.47629 4.89C6.38629 4.94 6.30962 4.98667 6.24629 5.03C6.18295 5.07 6.12629 5.09 6.07629 5.09C5.95629 5.09 5.86962 5.04 5.81629 4.94L5.49129 4.425ZM6.43629 10.32C6.43629 10.2167 6.45462 10.1183 6.49129 10.025C6.53129 9.93167 6.58462 9.85167 6.65129 9.785C6.71795 9.71833 6.79795 9.665 6.89129 9.625C6.98462 9.585 7.08462 9.565 7.19129 9.565C7.29795 9.565 7.39629 9.585 7.48629 9.625C7.57962 9.665 7.65962 9.71833 7.72629 9.785C7.79629 9.85167 7.85129 9.93167 7.89129 10.025C7.93129 10.1183 7.95129 10.2167 7.95129 10.32C7.95129 10.4267 7.93129 10.5267 7.89129 10.62C7.85129 10.71 7.79629 10.7883 7.72629 10.855C7.65962 10.9217 7.57962 10.9733 7.48629 11.01C7.39629 11.05 7.29795 11.07 7.19129 11.07C7.08462 11.07 6.98462 11.05 6.89129 11.01C6.79795 10.9733 6.71795 10.9217 6.65129 10.855C6.58462 10.7883 6.53129 10.71 6.49129 10.62C6.45462 10.5267 6.43629 10.4267 6.43629 10.32Z' fill='%23EF3340'/%3E%3C/svg%3E%0A");
+		}
+		.creditcard {
+			.icon-card {
+				color: #c1c6db;
+			}
+			input {
+				padding-left: 16px;
+				border-radius: 0px 4px 4px 0px;
+			}
+			p {
+				font-size: 18px;
+				position: absolute;
+				top: 20px;
+				left: 10px;
+			}
+			label {
+				left: 41px;
+			}
+		}
+	}
+
+	.tarjeta {
+		.imagen-tarjeta {
+			position: absolute;
+			width: 30px;
+			height: 20px;
+			top: 16px;
+			right: 10px;
+
+			border-radius: 5px;
+
+			&.visa {
+				background: url("/content/dam/rimac-ami/secure-payment/VISA.png");
+				background-size: cover;
+				background-position: center;
+			}
+		}
+		.checkbox {
+			margin-top: 20px;
+			p {
+				font-family: "Roboto";
+				font-style: normal;
+				font-weight: 300;
+				line-height: 20px;
+				font-size: 12px;
+				letter-spacing: 0.2px;
+				color: #a9b1d1;
+				.link {
+					font-family: "Roboto";
+					font-style: normal;
+					font-weight: 300;
+					line-height: 20px;
+					font-size: 12px;
+					letter-spacing: 0.2px;
+					color: #a9b1d1;
+					text-decoration: underline;
+					text-transform: lowercase;
+				}
+			}
+		}
+
+		.input-field {
+			margin: 0;
+			height: 54px;
+			input {
+				padding-left: 14.5px;
+			}
+			&.creditcard {
+				border-bottom: 0px;
+				input {
+					border-bottom: 0px;
+					border-radius: 4px 4px 0px 0px;
+				}
+			}
+
+			&.fecha {
+				border-bottom: 0px;
+				width: col(6, 11);
+				display: inline-block;
+				input {
+					border-bottom: 0px;
+
+					border-radius: 0px 0px 0px 0px;
+					border-right: none;
+				}
+			}
+
+			&.cvv {
+				border-bottom: 0px;
+				width: col(5, 11);
+				display: inline-block;
+				position: relative;
+
+				input {
+					border-bottom: 0px;
+					border-radius: 0px !important;
+				}
+				.tooltip {
+					position: absolute;
+					background-color: white;
+					z-index: 999;
+					padding: 20px;
+					font-family: "Roboto", sans-serif;
+					line-height: 16px;
+					font-size: 12px;
+					font-weight: 300;
+					color: #494f66;
+					border-radius: 8px;
+					display: none;
+					opacity: 0;
+					-webkit-transition: all 0.3s ease-in-out;
+					transition: all 0.3s ease-in-out;
+					border: 1px solid #efeff5;
+					top: 60px;
+					box-shadow: 0px 2px 12px rgba(63, 76, 130, 0.1),
+						0px 0px 4px rgba(77, 103, 205, 0.1);
+					right: -10px;
+					color: #494f66;
+					width: 170px;
+					@include media(tablet) {
+						width: 220px;
+						height: 119px;
+						top: -102px;
+						right: -93px;
+					}
+					.icon-cancel {
+						position: absolute;
+						right: 10px;
+						top: 10px;
+						font-size: 20px;
+						color: #eb3936;
+					}
+					img {
+						width: 80px;
+						height: auto;
+					}
+					h5 {
+						color: #f0353b;
+						padding-top: 0px;
+						padding-bottom: 8px;
+						font-size: 12px;
+						line-height: 14px;
+					}
+					&::before {
+						content: "";
+						width: 11px;
+						height: 7px;
+						top: -7px;
+						transform: rotate(180deg);
+						position: absolute;
+						background-repeat: no-repeat;
+						right: 21px;
+						background: url("/content/dam/rimac-ami/commons/bg-tooltip.png");
+						background-size: cover;
+						@include media(tablet) {
+							left: 47%;
+							top: 117px;
+							background-repeat: no-repeat;
+							background-size: contain;
+							transform: rotate(0deg);
+						}
+					}
+					input {
+						border-bottom: 0px;
+					}
+					&.active {
+						display: block;
+						opacity: 1;
+					}
+					p {
+						color: white;
+						color: $title-text-color;
+						font-size: 12px;
+						font-weight: 24px;
+						font-family: "Roboto", sans-serif;
+					}
+				}
+			}
+
+			&.nombre {
+				width: col(6, 11);
+				display: inline-block;
+				input {
+					border-radius: 0px 0px 0px 0px;
+					border-right: none;
+					border-bottom: 0px;
+				}
+			}
+			&.apellido {
+				width: col(5, 11);
+				display: inline-block;
+				border-bottom: 0px;
+
+				input {
+					border-bottom: 0px;
+
+					border-radius: 0px !important;
+				}
+			}
+			&.email {
+				width: col(11, 11);
+				input {
+					border-radius: 0px 0px 4px 4px;
+				}
+			}
+			label {
+				bottom: 31%;
+				left: 16px;
+			}
+		}
+
+		.modificar {
+			margin: 30px 0 0;
+		}
+		.cta {
+			float: right;
+			margin-top: 16px;
+			width: 100%;
+			text-align: right;
+			a {
+				width: auto;
+			}
+		}
+	}
+
+	.show-error {
+		margin-top: 16px;
+	}
+}

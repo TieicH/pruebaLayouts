@@ -1,0 +1,152 @@
+.secondarybenefits{
+    &__title{
+       
+        h4{
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+            max-width: col(14,18);
+            color: #494F66;
+
+            @media only screen and (max-width:330px){
+                font-size: 22px;
+                line-height: 120%;   
+            }
+            b{
+                font-weight: 400;
+                display: block;
+                color: $first-color;
+            }
+        }
+        img{
+            height: 88px;
+            width:auto;
+            float: right;
+        }
+    }
+    .benefits-dropdown{
+        .header-dropdown {
+            width: 100%;
+            border-top:1px solid #EDEFF5;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;            
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #676F8F;
+            padding:24px 0px;
+        
+            i{
+                position: absolute;
+                right:12px;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+            }
+
+            &.active{
+                i{
+                    -moz-transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    transform-origin: center;
+                }  
+            }
+
+          
+        }
+        .dropdown-content{
+            list-style: none;
+            clear: both;
+            border-bottom:1px solid #EDEFF5;
+            overflow: hidden;
+            -webkit-transition: all .6s linear;
+            -moz-transition: all .6s linear;
+            -ms-transition: all .6s linear;
+            -o-transition: all .6s linear;
+            transition: all .6s linear;
+            opacity: 0;
+            max-height: 1px;
+
+            li{
+                margin-bottom:16px;
+                font-weight: 300;
+                font-size: 14px;
+                font-family: $second-font;
+                &:last-child{
+                    margin-bottom: 24px;
+                }
+                @include media(tablet){
+                    margin-bottom:0px; 
+                }
+                p{
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 89%;
+                    line-height: initial;
+                    @include media (tablet){
+                        line-height: 32px;
+                    }
+                }
+                &::before{
+                    content:"";
+                    width:11px;
+                    height: 9px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 16px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4 7L10 1' stroke='%2392D66F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");                    
+
+                }
+                &.cancel{
+                    &::before{
+                        content: "";
+                        background-image: url("data:image/svg+xml,%3Csvg width='7' height='8' viewBox='0 0 7 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.146447 1.35355C-0.0488156 1.15829 -0.0488156 0.841709 0.146447 0.646447C0.341709 0.451184 0.658291 0.451184 0.853553 0.646447L3.5 3.29289L6.14645 0.646447C6.34171 0.451184 6.65829 0.451184 6.85355 0.646447C7.04882 0.841709 7.04882 1.15829 6.85355 1.35355L4.20711 4L6.85355 6.64645C7.04882 6.84171 7.04882 7.15829 6.85355 7.35355C6.65829 7.54882 6.34171 7.54882 6.14645 7.35355L3.5 4.70711L0.853554 7.35355C0.658291 7.54882 0.341709 7.54882 0.146447 7.35355C-0.0488153 7.15829 -0.0488153 6.84171 0.146447 6.64645L2.79289 4L0.146447 1.35355Z' fill='%23A9B1D1'/%3E%3C/svg%3E%0A");                        width: 11px;
+                        height: 13px;
+                        background-repeat: no-repeat;
+                        background-size: 11px;
+                        display: inline-block;
+                        margin-right: 16px;
+                    }
+                }
+            }
+            &.active{
+             opacity: 1;
+            max-height: 500px;
+            }
+        }
+    }
+    .container-button{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        text-align: right;
+        @include media (tablet){
+            flex-flow: wrap;
+        }
+    }
+
+    .link{
+        margin-top: 32px;
+        @include media(tablet){
+            margin-top: 0px;
+        }
+    }
+    .btn{
+        text-align: center;
+       @include media (tablet){
+        width: 50%;;
+        text-align: right;
+       }
+    } 
+}
+
